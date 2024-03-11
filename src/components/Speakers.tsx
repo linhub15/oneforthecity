@@ -7,7 +7,7 @@ import clsx from 'clsx'
 
 import { Container } from '@/components/Container'
 import { DiamondIcon } from '@/components/DiamondIcon'
-import andrewGreeneImage from '@/images/avatars/andrew-greene.jpg'
+import andrewGreeneImage from '@/public/images/andrew-greene.jpg'
 import cathleneBurrageImage from '@/images/avatars/cathlene-burrage.jpg'
 import damarisKimuraImage from '@/images/avatars/damaris-kimura.jpg'
 import dianneGuilianelliImage from '@/images/avatars/dianne-guilianelli.jpg'
