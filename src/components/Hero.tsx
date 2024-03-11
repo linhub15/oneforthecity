@@ -25,7 +25,7 @@ export function Hero() {
             </p>
             <p>
               This year marks the fourth volume, and back in our home town
-              Edmonton, AB. With two day event will allow us to have more
+              Edmonton. With two day event will allow us to have more
               cyphers, workshops and community exchange.
             </p>
           </div>
@@ -34,9 +34,9 @@ export function Hero() {
           </Button>
           <dl className="mt-10 grid grid-cols-2 gap-x-10 gap-y-6 sm:mt-16 sm:gap-x-16 sm:gap-y-10 sm:text-center lg:auto-cols-auto lg:grid-flow-col lg:grid-cols-none lg:justify-start lg:text-left">
             {[
-              ["Date", "June 29-30"],
-              ["Venue", "St. Basil's Cultural Centre"],
-              ["Location", "Edmonton"],
+              ["2 Day Event", "June 29-30"],
+              ["Edmonton, Alberta", "St. Basil's Cultural Centre"],
+              ["Breaking & Open Style", "Crew vs Crew Battle"],
             ].map(([name, value]) => (
               <div key={name}>
                 <dt className="font-mono text-sm text-blue-600">{name}</dt>

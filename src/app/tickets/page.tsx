@@ -1,11 +1,12 @@
 import { Button } from "@/components/Button";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
+import Link from "next/link";
 
 export default function Tickets() {
   return (
     <>
-      <Header action={<Button href="/">Go Home</Button>} />
+      <Header action={<Link className="underline text-blue-600 hover:bg-blue-100 rounded-xl p-4" href="/">Go Home</Link>} />
       <div className="mt-10 md:mt-20 w-full mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 relative space-y-12">
         <div className="mx-auto max-w-2xl lg:mx-0 space-y-4">
           <h2
