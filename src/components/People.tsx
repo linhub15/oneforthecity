@@ -162,7 +162,7 @@ export function People() {
             Who's coming?
           </h2>
           <p className="mt-4 font-display text-2xl tracking-tight text-blue-900">
-            We're excited to welcome special guests to a part of this year's One for the City.
+            We're excited to welcome special guests to be part of this year's One for the City.
           </p>
         </div>
         <Tab.Group

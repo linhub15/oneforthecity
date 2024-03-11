@@ -1,7 +1,6 @@
 import { BackgroundImage } from "@/components/BackgroundImage";
 import { Button } from "@/components/Button";
 import { Container } from "@/components/Container";
-import Link from "next/link";
 
 export function Hero() {
   return (
@@ -36,7 +35,7 @@ export function Hero() {
           <dl className="mt-10 grid grid-cols-2 gap-x-10 gap-y-6 sm:mt-16 sm:gap-x-16 sm:gap-y-10 sm:text-center lg:auto-cols-auto lg:grid-flow-col lg:grid-cols-none lg:justify-start lg:text-left">
             {[
               ["Date", "June 29-30"],
-              ["Venue", "St Basil's Cultural Centre"],
+              ["Venue", "St. Basil's Cultural Centre"],
               ["Location", "Edmonton"],
             ].map(([name, value]) => (
               <div key={name}>
@@ -47,6 +46,17 @@ export function Hero() {
               </div>
             ))}
           </dl>
+        </div>
+        <div className="mx-auto max-w-2xl lg:max-w-4xl lg:px-12 flex justify-center pt-12">
+          <iframe
+          className="rounded-xl shadow w-full h-72 lg:h-96"
+            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d9491.3685338932!2d-113.5099987!3d53.5070154!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x53a021ffa16b56c5%3A0x78ca962164391760!2sSt%20Basil&#39;s%20Cultural%20Centre!5e0!3m2!1sen!2sca!4v1710199056276!5m2!1sen!2sca"
+            width="600"
+            style={{ border: 0 }}
+            allowFullScreen={false}
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+          />
         </div>
       </Container>
     </div>
