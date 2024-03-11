@@ -25,7 +25,15 @@ export function Sponsors() {
         {sponsors.length === 0 && (
           <div className="mx-auto mt-10 max-w-max ">
             <p className="block text-center w-full">
-              Contact us at <a className="underline text-blue-600" href="mailto:contact@oneforthecity.com">contact@oneforthecity.com</a> out if you'd like more information on becoming a sponsor
+              Contact us at{" "}
+              <a
+                className="underline text-blue-600"
+                href="mailto:contact@oneforthecity.com"
+              >
+                contact@oneforthecity.com
+              </a>{" "}
+              out if you'd like more information on becoming a sponsor or
+              partner.
             </p>
           </div>
         )}
