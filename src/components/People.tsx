@@ -1,13 +1,14 @@
 "use client";
 
 import { useEffect, useId, useState } from "react";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import { Tab } from "@headlessui/react";
 import clsx from "clsx";
 
 import { Container } from "@/components/Container";
 import { DiamondIcon } from "@/components/DiamondIcon";
-import andrewGreeneImage from "@/public/images/andrew-greene.jpg";
+import unknownImage from "@/images/avatars/unknown.png";
+import andrewGreeneImage from "@/images/avatars/andrew-greene.jpg";
 import cathleneBurrageImage from "@/images/avatars/cathlene-burrage.jpg";
 import damarisKimuraImage from "@/images/avatars/damaris-kimura.jpg";
 import dianneGuilianelliImage from "@/images/avatars/dianne-guilianelli.jpg";
@@ -26,115 +27,80 @@ import ronniCantadoreImage from "@/images/avatars/ronni-cantadore.jpg";
 import stevenMchailImage from "@/images/avatars/steven-mchail.jpg";
 import waylonHydenImage from "@/images/avatars/waylon-hyden.jpg";
 
-const days = [
+type People = {
+  name: string;
+  people: Person[];
+};
+
+type Person = {
+  name: string;
+  role: string;
+  image?: StaticImageData;
+  instagram?: string;
+};
+const categories: People[] = [
   {
-    name: "Opening Day",
-    date: "April 4",
-    dateTime: "2022-04-04",
-    speakers: [
+    name: "Hosts & DJs",
+    people: [
       {
-        name: "Steven McHail",
-        role: "Designer at Globex Corporation",
-        image: stevenMchailImage,
+        name: "TBA",
+        role: "Dj",
+        image: undefined,
       },
       {
-        name: "Jaquelin Isch",
-        role: "UX Design at InGen",
-        image: jaquelinIschImage,
+        name: "TBA",
+        role: "Dj",
+        image: undefined,
       },
       {
-        name: "Dianne Guilianelli",
-        role: "General Manager at Initech",
-        image: dianneGuilianelliImage,
+        name: "TBA",
+        role: "Emcee",
+        image: undefined,
       },
       {
-        name: "Ronni Cantadore",
-        role: "Design Engineer at Weyland-Yutani",
-        image: ronniCantadoreImage,
-      },
-      {
-        name: "Erhart Cockrin",
-        role: "Product Lead at Cyberdyne Systems",
-        image: erhartCockrinImage,
-      },
-      {
-        name: "Parker Johnson",
-        role: "UI Designer at MomCorp",
-        image: parkerJohnsonImage,
+        name: "TBA",
+        role: "Emcee",
+        image: undefined,
       },
     ],
   },
   {
-    name: "Speakers & Workshops",
-    date: "April 5",
-    dateTime: "2022-04-05",
-    speakers: [
+    name: "Breaking Judges",
+    people: [
       {
-        name: "Damaris Kimura",
-        role: "Senior Engineer at OCP",
-        image: damarisKimuraImage,
+        name: "TBA",
+        role: "Breaking Judge",
+        image: undefined,
       },
       {
-        name: "Ibrahim Frasch",
-        role: "Programmer at Umbrella Corp",
-        image: ibrahimFraschImage,
+        name: "TBA",
+        role: "Breaking Judge",
+        image: undefined,
       },
       {
-        name: "Cathlene Burrage",
-        role: "Frontend Developer at Buy n Large",
-        image: cathleneBurrageImage,
-      },
-      {
-        name: "Rinaldo Beynon",
-        role: "Data Scientist at Rekall",
-        image: rinaldoBeynonImage,
-      },
-      {
-        name: "Waylon Hyden",
-        role: "DevOps at RDA Corporation",
-        image: waylonHydenImage,
-      },
-      {
-        name: "Giordano Sagucio",
-        role: "Game Developer at Soylent Corp",
-        image: giordanoSagucioImage,
+        name: "TBA",
+        role: "Breaking Judge",
+        image: undefined,
       },
     ],
   },
   {
-    name: "Interviews",
-    date: "April 6",
-    dateTime: "2022-04-06",
-    speakers: [
+    name: "Open Style Judges",
+    people: [
       {
-        name: "Andrew Greene",
-        role: "Frontend Developer at Ultratech",
-        image: andrewGreeneImage,
+        name: "TBA",
+        role: "Open Style Judge",
+        image: undefined,
       },
       {
-        name: "Heather Terry",
-        role: "Backend Developer at Xanatos Enterprises",
-        image: heatherTerryImage,
+        name: "TBA",
+        role: "Open Style Judge",
+        image: undefined,
       },
       {
-        name: "Piers Wilkins",
-        role: "Full stack Developer at BiffCo",
-        image: piersWilkinsImage,
-      },
-      {
-        name: "Gordon Sanderson",
-        role: "Mobile Developer at Cobra Industries",
-        image: gordonSandersonImage,
-      },
-      {
-        name: "Kimberly Parsons",
-        role: "Game Developer at Tyrell Corporation",
-        image: kimberlyParsonsImage,
-      },
-      {
-        name: "Richard Astley",
-        role: "CEO at Roll Out",
-        image: richardAstley,
+        name: "TBA",
+        role: "Open Style Judge",
+        image: undefined,
       },
     ],
   },
@@ -161,7 +127,7 @@ function ImageClipPaths({
   );
 }
 
-export function Speakers() {
+export function People() {
   let id = useId();
   let [tabOrientation, setTabOrientation] = useState("horizontal");
 
@@ -193,11 +159,10 @@ export function Speakers() {
             id="speakers-title"
             className="font-display text-4xl font-medium tracking-tighter text-blue-600 sm:text-5xl"
           >
-            Speakers
+            Who's coming?
           </h2>
           <p className="mt-4 font-display text-2xl tracking-tight text-blue-900">
-            Learn from the experts on the cutting-edge of deception at the most
-            sinister companies.
+            We're excited to welcome special guests to a part of this year's One for the City.
           </p>
         </div>
         <Tab.Group
@@ -210,12 +175,12 @@ export function Speakers() {
             <Tab.List className="grid auto-cols-auto grid-flow-col justify-start gap-x-8 gap-y-10 whitespace-nowrap px-4 sm:mx-auto sm:max-w-2xl sm:grid-cols-3 sm:px-0 sm:text-center lg:grid-flow-row lg:grid-cols-1 lg:text-left">
               {({ selectedIndex }) => (
                 <>
-                  {days.map((day, dayIndex) => (
-                    <div key={day.dateTime} className="relative lg:pl-8">
+                  {categories.map((category, index) => (
+                    <div key={index} className="relative lg:pl-8">
                       <DiamondIcon
                         className={clsx(
                           "absolute left-[-0.5px] top-[0.5625rem] hidden h-1.5 w-1.5 overflow-visible lg:block",
-                          dayIndex === selectedIndex
+                          index === selectedIndex
                             ? "fill-blue-600 stroke-blue-600"
                             : "fill-transparent stroke-slate-400",
                         )}
@@ -223,23 +188,17 @@ export function Speakers() {
                       <div className="relative">
                         <div
                           className={clsx(
-                            "font-mono text-sm",
-                            dayIndex === selectedIndex
-                              ? "text-blue-600"
+                            "font-mono",
+                            index === selectedIndex
+                              ? "text-blue-600 font-semibold"
                               : "text-slate-500",
                           )}
                         >
                           <Tab className="ui-not-focus-visible:outline-none">
                             <span className="absolute inset-0" />
-                            {day.name}
+                            {category.name}
                           </Tab>
                         </div>
-                        <time
-                          dateTime={day.dateTime}
-                          className="mt-1.5 block text-2xl font-semibold tracking-tight text-blue-900"
-                        >
-                          {day.date}
-                        </time>
                       </div>
                     </div>
                   ))}
@@ -248,14 +207,14 @@ export function Speakers() {
             </Tab.List>
           </div>
           <Tab.Panels className="lg:col-span-3">
-            {days.map((day) => (
+            {categories.map((category, index) => (
               <Tab.Panel
-                key={day.dateTime}
+                key={index}
                 className="grid grid-cols-1 gap-x-8 gap-y-10 ui-not-focus-visible:outline-none sm:grid-cols-2 sm:gap-y-16 md:grid-cols-3"
                 unmount={false}
               >
-                {day.speakers.map((speaker, speakerIndex) => (
-                  <div key={speakerIndex}>
+                {category.people.map((person, index) => (
+                  <div key={index}>
                     <div className="group relative h-[17.5rem] transform overflow-hidden rounded-4xl">
                       <div
                         className={clsx(
@@ -264,16 +223,16 @@ export function Speakers() {
                             "border-blue-300",
                             "border-indigo-300",
                             "border-sky-300",
-                          ][speakerIndex % 3],
+                          ][index % 3],
                         )}
                       />
                       <div
                         className="absolute inset-0 bg-indigo-50"
-                        style={{ clipPath: `url(#${id}-${speakerIndex % 3})` }}
+                        style={{ clipPath: `url(#${id}-${index % 3})` }}
                       >
                         <Image
                           className="absolute inset-0 h-full w-full object-cover transition duration-300 group-hover:scale-110"
-                          src={speaker.image}
+                          src={person.image ?? unknownImage}
                           alt=""
                           priority
                           sizes="(min-width: 1280px) 17.5rem, (min-width: 1024px) 25vw, (min-width: 768px) 33vw, (min-width: 640px) 50vw, 100vw"
@@ -281,10 +240,10 @@ export function Speakers() {
                       </div>
                     </div>
                     <h3 className="mt-8 font-display text-xl font-bold tracking-tight text-slate-900">
-                      {speaker.name}
+                      {person.name}
                     </h3>
                     <p className="mt-1 text-base tracking-tight text-slate-500">
-                      {speaker.role}
+                      {person.role}
                     </p>
                   </div>
                 ))}
