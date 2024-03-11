@@ -8,24 +8,7 @@ import clsx from "clsx";
 import { Container } from "@/components/Container";
 import { DiamondIcon } from "@/components/DiamondIcon";
 import unknownImage from "@/images/avatars/unknown.png";
-import andrewGreeneImage from "@/images/avatars/andrew-greene.jpg";
-import cathleneBurrageImage from "@/images/avatars/cathlene-burrage.jpg";
-import damarisKimuraImage from "@/images/avatars/damaris-kimura.jpg";
-import dianneGuilianelliImage from "@/images/avatars/dianne-guilianelli.jpg";
-import erhartCockrinImage from "@/images/avatars/erhart-cockrin.jpg";
-import giordanoSagucioImage from "@/images/avatars/giordano-sagucio.jpg";
-import gordonSandersonImage from "@/images/avatars/gordon-sanderson.jpg";
-import heatherTerryImage from "@/images/avatars/heather-terry.jpg";
-import ibrahimFraschImage from "@/images/avatars/ibrahim-frasch.jpg";
-import jaquelinIschImage from "@/images/avatars/jaquelin-isch.jpg";
-import kimberlyParsonsImage from "@/images/avatars/kimberly-parsons.jpg";
-import parkerJohnsonImage from "@/images/avatars/parker-johnson.jpg";
-import piersWilkinsImage from "@/images/avatars/piers-wilkins.jpg";
-import richardAstley from "@/images/avatars/richard-astley.jpg";
-import rinaldoBeynonImage from "@/images/avatars/rinaldo-beynon.jpg";
-import ronniCantadoreImage from "@/images/avatars/ronni-cantadore.jpg";
-import stevenMchailImage from "@/images/avatars/steven-mchail.jpg";
-import waylonHydenImage from "@/images/avatars/waylon-hyden.jpg";
+import curtisImage from "@/images/avatars/curtis.jpg";
 
 type People = {
   name: string;
@@ -68,9 +51,10 @@ const categories: People[] = [
     name: "Breaking Judges",
     people: [
       {
-        name: "TBA",
+        name: "Curtis",
         role: "Breaking Judge",
-        image: undefined,
+        image: curtisImage,
+        instagram: "straycurt",
       },
       {
         name: "TBA",
@@ -162,7 +146,8 @@ export function People() {
             Who's coming?
           </h2>
           <p className="mt-4 font-display text-2xl tracking-tight text-blue-900">
-            We're excited to welcome special guests to be part of this year's One for the City.
+            We're excited to welcome special guests to be part of this year's
+            One for the City.
           </p>
         </div>
         <Tab.Group
