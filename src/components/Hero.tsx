@@ -1,6 +1,6 @@
-import { BackgroundImage } from '@/components/BackgroundImage'
-import { Button } from '@/components/Button'
-import { Container } from '@/components/Container'
+import { BackgroundImage } from "@/components/BackgroundImage";
+import { Button } from "@/components/Button";
+import { Container } from "@/components/Container";
 
 export function Hero() {
   return (
@@ -9,7 +9,8 @@ export function Hero() {
       <Container className="relative">
         <div className="mx-auto max-w-2xl lg:max-w-4xl lg:px-12">
           <h1 className="font-display text-5xl font-bold tracking-tighter text-blue-600 sm:text-6xl">
-            <span className="sr-only">One for the City Vol. 4</span>One for the City Vol. 4
+            <span className="sr-only">One for the City Vol. 4</span>One for the
+            City Vol. 4
           </h1>
           <div className="mt-6 space-y-6 font-display text-2xl tracking-tight text-blue-900">
             <p>
@@ -29,10 +30,10 @@ export function Hero() {
           </Button>
           <dl className="mt-10 grid grid-cols-2 gap-x-10 gap-y-6 sm:mt-16 sm:gap-x-16 sm:gap-y-10 sm:text-center lg:auto-cols-auto lg:grid-flow-col lg:grid-cols-none lg:justify-start lg:text-left">
             {[
-              ['Competitors', '200+'],
-              ['Venue', "St Basil's Cultural Centre"],
-              ['Location', 'Edmonton'],
-              ['Date', 'June 29-30']
+              ["Competitors", "200+"],
+              ["Venue", "St Basil's Cultural Centre"],
+              ["Location", "Edmonton"],
+              ["Date", "June 29-30"],
             ].map(([name, value]) => (
               <div key={name}>
                 <dt className="font-mono text-sm text-blue-600">{name}</dt>
@@ -45,5 +46,5 @@ export function Hero() {
         </div>
       </Container>
     </div>
-  )
+  );
 }

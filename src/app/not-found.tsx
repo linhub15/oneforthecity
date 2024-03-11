@@ -1,7 +1,7 @@
-import { BackgroundImage } from '@/components/BackgroundImage'
-import { Button } from '@/components/Button'
-import { Container } from '@/components/Container'
-import { Layout } from '@/components/Layout'
+import { BackgroundImage } from "@/components/BackgroundImage";
+import { Button } from "@/components/Button";
+import { Container } from "@/components/Container";
+import { Layout } from "@/components/Layout";
 
 export default function NotFound() {
   return (
@@ -24,5 +24,5 @@ export default function NotFound() {
         </Container>
       </div>
     </Layout>
-  )
+  );
 }

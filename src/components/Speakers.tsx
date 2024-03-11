@@ -1,149 +1,149 @@
-'use client'
+"use client";
 
-import { useEffect, useId, useState } from 'react'
-import Image from 'next/image'
-import { Tab } from '@headlessui/react'
-import clsx from 'clsx'
+import { useEffect, useId, useState } from "react";
+import Image from "next/image";
+import { Tab } from "@headlessui/react";
+import clsx from "clsx";
 
-import { Container } from '@/components/Container'
-import { DiamondIcon } from '@/components/DiamondIcon'
-import andrewGreeneImage from '@/public/images/andrew-greene.jpg'
-import cathleneBurrageImage from '@/images/avatars/cathlene-burrage.jpg'
-import damarisKimuraImage from '@/images/avatars/damaris-kimura.jpg'
-import dianneGuilianelliImage from '@/images/avatars/dianne-guilianelli.jpg'
-import erhartCockrinImage from '@/images/avatars/erhart-cockrin.jpg'
-import giordanoSagucioImage from '@/images/avatars/giordano-sagucio.jpg'
-import gordonSandersonImage from '@/images/avatars/gordon-sanderson.jpg'
-import heatherTerryImage from '@/images/avatars/heather-terry.jpg'
-import ibrahimFraschImage from '@/images/avatars/ibrahim-frasch.jpg'
-import jaquelinIschImage from '@/images/avatars/jaquelin-isch.jpg'
-import kimberlyParsonsImage from '@/images/avatars/kimberly-parsons.jpg'
-import parkerJohnsonImage from '@/images/avatars/parker-johnson.jpg'
-import piersWilkinsImage from '@/images/avatars/piers-wilkins.jpg'
-import richardAstley from '@/images/avatars/richard-astley.jpg'
-import rinaldoBeynonImage from '@/images/avatars/rinaldo-beynon.jpg'
-import ronniCantadoreImage from '@/images/avatars/ronni-cantadore.jpg'
-import stevenMchailImage from '@/images/avatars/steven-mchail.jpg'
-import waylonHydenImage from '@/images/avatars/waylon-hyden.jpg'
+import { Container } from "@/components/Container";
+import { DiamondIcon } from "@/components/DiamondIcon";
+import andrewGreeneImage from "@/public/images/andrew-greene.jpg";
+import cathleneBurrageImage from "@/images/avatars/cathlene-burrage.jpg";
+import damarisKimuraImage from "@/images/avatars/damaris-kimura.jpg";
+import dianneGuilianelliImage from "@/images/avatars/dianne-guilianelli.jpg";
+import erhartCockrinImage from "@/images/avatars/erhart-cockrin.jpg";
+import giordanoSagucioImage from "@/images/avatars/giordano-sagucio.jpg";
+import gordonSandersonImage from "@/images/avatars/gordon-sanderson.jpg";
+import heatherTerryImage from "@/images/avatars/heather-terry.jpg";
+import ibrahimFraschImage from "@/images/avatars/ibrahim-frasch.jpg";
+import jaquelinIschImage from "@/images/avatars/jaquelin-isch.jpg";
+import kimberlyParsonsImage from "@/images/avatars/kimberly-parsons.jpg";
+import parkerJohnsonImage from "@/images/avatars/parker-johnson.jpg";
+import piersWilkinsImage from "@/images/avatars/piers-wilkins.jpg";
+import richardAstley from "@/images/avatars/richard-astley.jpg";
+import rinaldoBeynonImage from "@/images/avatars/rinaldo-beynon.jpg";
+import ronniCantadoreImage from "@/images/avatars/ronni-cantadore.jpg";
+import stevenMchailImage from "@/images/avatars/steven-mchail.jpg";
+import waylonHydenImage from "@/images/avatars/waylon-hyden.jpg";
 
 const days = [
   {
-    name: 'Opening Day',
-    date: 'April 4',
-    dateTime: '2022-04-04',
+    name: "Opening Day",
+    date: "April 4",
+    dateTime: "2022-04-04",
     speakers: [
       {
-        name: 'Steven McHail',
-        role: 'Designer at Globex Corporation',
+        name: "Steven McHail",
+        role: "Designer at Globex Corporation",
         image: stevenMchailImage,
       },
       {
-        name: 'Jaquelin Isch',
-        role: 'UX Design at InGen',
+        name: "Jaquelin Isch",
+        role: "UX Design at InGen",
         image: jaquelinIschImage,
       },
       {
-        name: 'Dianne Guilianelli',
-        role: 'General Manager at Initech',
+        name: "Dianne Guilianelli",
+        role: "General Manager at Initech",
         image: dianneGuilianelliImage,
       },
       {
-        name: 'Ronni Cantadore',
-        role: 'Design Engineer at Weyland-Yutani',
+        name: "Ronni Cantadore",
+        role: "Design Engineer at Weyland-Yutani",
         image: ronniCantadoreImage,
       },
       {
-        name: 'Erhart Cockrin',
-        role: 'Product Lead at Cyberdyne Systems',
+        name: "Erhart Cockrin",
+        role: "Product Lead at Cyberdyne Systems",
         image: erhartCockrinImage,
       },
       {
-        name: 'Parker Johnson',
-        role: 'UI Designer at MomCorp',
+        name: "Parker Johnson",
+        role: "UI Designer at MomCorp",
         image: parkerJohnsonImage,
       },
     ],
   },
   {
-    name: 'Speakers & Workshops',
-    date: 'April 5',
-    dateTime: '2022-04-05',
+    name: "Speakers & Workshops",
+    date: "April 5",
+    dateTime: "2022-04-05",
     speakers: [
       {
-        name: 'Damaris Kimura',
-        role: 'Senior Engineer at OCP',
+        name: "Damaris Kimura",
+        role: "Senior Engineer at OCP",
         image: damarisKimuraImage,
       },
       {
-        name: 'Ibrahim Frasch',
-        role: 'Programmer at Umbrella Corp',
+        name: "Ibrahim Frasch",
+        role: "Programmer at Umbrella Corp",
         image: ibrahimFraschImage,
       },
       {
-        name: 'Cathlene Burrage',
-        role: 'Frontend Developer at Buy n Large',
+        name: "Cathlene Burrage",
+        role: "Frontend Developer at Buy n Large",
         image: cathleneBurrageImage,
       },
       {
-        name: 'Rinaldo Beynon',
-        role: 'Data Scientist at Rekall',
+        name: "Rinaldo Beynon",
+        role: "Data Scientist at Rekall",
         image: rinaldoBeynonImage,
       },
       {
-        name: 'Waylon Hyden',
-        role: 'DevOps at RDA Corporation',
+        name: "Waylon Hyden",
+        role: "DevOps at RDA Corporation",
         image: waylonHydenImage,
       },
       {
-        name: 'Giordano Sagucio',
-        role: 'Game Developer at Soylent Corp',
+        name: "Giordano Sagucio",
+        role: "Game Developer at Soylent Corp",
         image: giordanoSagucioImage,
       },
     ],
   },
   {
-    name: 'Interviews',
-    date: 'April 6',
-    dateTime: '2022-04-06',
+    name: "Interviews",
+    date: "April 6",
+    dateTime: "2022-04-06",
     speakers: [
       {
-        name: 'Andrew Greene',
-        role: 'Frontend Developer at Ultratech',
+        name: "Andrew Greene",
+        role: "Frontend Developer at Ultratech",
         image: andrewGreeneImage,
       },
       {
-        name: 'Heather Terry',
-        role: 'Backend Developer at Xanatos Enterprises',
+        name: "Heather Terry",
+        role: "Backend Developer at Xanatos Enterprises",
         image: heatherTerryImage,
       },
       {
-        name: 'Piers Wilkins',
-        role: 'Full stack Developer at BiffCo',
+        name: "Piers Wilkins",
+        role: "Full stack Developer at BiffCo",
         image: piersWilkinsImage,
       },
       {
-        name: 'Gordon Sanderson',
-        role: 'Mobile Developer at Cobra Industries',
+        name: "Gordon Sanderson",
+        role: "Mobile Developer at Cobra Industries",
         image: gordonSandersonImage,
       },
       {
-        name: 'Kimberly Parsons',
-        role: 'Game Developer at Tyrell Corporation',
+        name: "Kimberly Parsons",
+        role: "Game Developer at Tyrell Corporation",
         image: kimberlyParsonsImage,
       },
       {
-        name: 'Richard Astley',
-        role: 'CEO at Roll Out',
+        name: "Richard Astley",
+        role: "CEO at Roll Out",
         image: richardAstley,
       },
     ],
   },
-]
+];
 
 function ImageClipPaths({
   id,
   ...props
-}: React.ComponentPropsWithoutRef<'svg'> & { id: string }) {
+}: React.ComponentPropsWithoutRef<"svg"> & { id: string }) {
   return (
     <svg aria-hidden="true" width={0} height={0} {...props}>
       <defs>
@@ -158,27 +158,27 @@ function ImageClipPaths({
         </clipPath>
       </defs>
     </svg>
-  )
+  );
 }
 
 export function Speakers() {
-  let id = useId()
-  let [tabOrientation, setTabOrientation] = useState('horizontal')
+  let id = useId();
+  let [tabOrientation, setTabOrientation] = useState("horizontal");
 
   useEffect(() => {
-    let lgMediaQuery = window.matchMedia('(min-width: 1024px)')
+    let lgMediaQuery = window.matchMedia("(min-width: 1024px)");
 
     function onMediaQueryChange({ matches }: { matches: boolean }) {
-      setTabOrientation(matches ? 'vertical' : 'horizontal')
+      setTabOrientation(matches ? "vertical" : "horizontal");
     }
 
-    onMediaQueryChange(lgMediaQuery)
-    lgMediaQuery.addEventListener('change', onMediaQueryChange)
+    onMediaQueryChange(lgMediaQuery);
+    lgMediaQuery.addEventListener("change", onMediaQueryChange);
 
     return () => {
-      lgMediaQuery.removeEventListener('change', onMediaQueryChange)
-    }
-  }, [])
+      lgMediaQuery.removeEventListener("change", onMediaQueryChange);
+    };
+  }, []);
 
   return (
     <section
@@ -203,7 +203,7 @@ export function Speakers() {
         <Tab.Group
           as="div"
           className="mt-14 grid grid-cols-1 items-start gap-x-8 gap-y-8 sm:mt-16 sm:gap-y-16 lg:mt-24 lg:grid-cols-4"
-          vertical={tabOrientation === 'vertical'}
+          vertical={tabOrientation === "vertical"}
         >
           <div className="relative -mx-4 flex overflow-x-auto pb-4 sm:mx-0 sm:block sm:overflow-visible sm:pb-0">
             <div className="absolute bottom-0 left-0.5 top-2 hidden w-px bg-slate-200 lg:block" />
@@ -214,19 +214,19 @@ export function Speakers() {
                     <div key={day.dateTime} className="relative lg:pl-8">
                       <DiamondIcon
                         className={clsx(
-                          'absolute left-[-0.5px] top-[0.5625rem] hidden h-1.5 w-1.5 overflow-visible lg:block',
+                          "absolute left-[-0.5px] top-[0.5625rem] hidden h-1.5 w-1.5 overflow-visible lg:block",
                           dayIndex === selectedIndex
-                            ? 'fill-blue-600 stroke-blue-600'
-                            : 'fill-transparent stroke-slate-400',
+                            ? "fill-blue-600 stroke-blue-600"
+                            : "fill-transparent stroke-slate-400",
                         )}
                       />
                       <div className="relative">
                         <div
                           className={clsx(
-                            'font-mono text-sm',
+                            "font-mono text-sm",
                             dayIndex === selectedIndex
-                              ? 'text-blue-600'
-                              : 'text-slate-500',
+                              ? "text-blue-600"
+                              : "text-slate-500",
                           )}
                         >
                           <Tab className="ui-not-focus-visible:outline-none">
@@ -259,11 +259,11 @@ export function Speakers() {
                     <div className="group relative h-[17.5rem] transform overflow-hidden rounded-4xl">
                       <div
                         className={clsx(
-                          'absolute bottom-6 left-0 right-4 top-0 rounded-4xl border transition duration-300 group-hover:scale-95 xl:right-6',
+                          "absolute bottom-6 left-0 right-4 top-0 rounded-4xl border transition duration-300 group-hover:scale-95 xl:right-6",
                           [
-                            'border-blue-300',
-                            'border-indigo-300',
-                            'border-sky-300',
+                            "border-blue-300",
+                            "border-indigo-300",
+                            "border-sky-300",
                           ][speakerIndex % 3],
                         )}
                       />
@@ -294,5 +294,5 @@ export function Speakers() {
         </Tab.Group>
       </Container>
     </section>
-  )
+  );
 }
