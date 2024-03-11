@@ -23,98 +23,39 @@ const schedule: Array<Day> = [
   {
     date: "June 29",
     dateTime: "2024-06-29",
-    summary: "Cyphers & Prelims",
+    summary: "Prelims to Top 8",
     timeSlots: [
       {
-        name: "Steven McHail",
-        description: "Not so one-time payments",
-        start: "9:00AM",
-        end: "10:00AM",
-      },
-      {
-        name: "Jaquelin Isch",
-        description: "The finer print",
-        start: "10:00AM",
-        end: "11:00AM",
-      },
-      {
-        name: "Dianne Guilianelli",
-        description: "Post-purchase blackmail",
-        start: "11:00AM",
-        end: "12:00PM",
-      },
-      {
-        name: "Lunch",
-        description: null,
-        start: "12:00PM",
-        end: "1:00PM",
-      },
-      {
-        name: "Ronni Cantadore",
-        description: "Buy or die",
+        name: "Start",
+        description: "",
         start: "1:00PM",
-        end: "2:00PM",
-      },
-      {
-        name: "Erhart Cockrin",
-        description: "In-person cancellation",
-        start: "2:00PM",
-        end: "3:00PM",
-      },
-      {
-        name: "Parker Johnson",
-        description: "The pay/cancel switcheroo",
-        start: "3:00PM",
-        end: "4:00PM",
+        end: "",
       },
     ],
   },
   {
     date: "June 30",
     dateTime: "2024-06-30",
-    summary: "Workshops, Top 8 & Finals",
+    summary: "Top 8 & Finals",
     timeSlots: [
       {
-        name: "Damaris Kimura",
-        description: "The invisible card reader",
-        start: "9:00AM",
-        end: "10:00AM",
-      },
-      {
-        name: "Ibrahim Frasch",
-        description: "Stealing fingerprints",
-        start: "10:00AM",
-        end: "11:00AM",
-      },
-      {
-        name: "Cathlene Burrage",
-        description: "Voting machines",
-        start: "11:00AM",
-        end: "12:00PM",
-      },
-      {
-        name: "Lunch",
-        description: null,
-        start: "12:00PM",
-        end: "1:00PM",
-      },
-      {
-        name: "Rinaldo Beynon",
-        description: "Blackhat SEO that works",
+        name: "Start",
+        description: "",
         start: "1:00PM",
-        end: "2:00PM",
+        end: "",
       },
+    ],
+  },
+  {
+    date: "June 30",
+    dateTime: "",
+    summary: "Workshops",
+    timeSlots: [
       {
-        name: "Waylon Hyden",
-        description: "Turning your audience into a botnet",
-        start: "2:00PM",
-        end: "3:00PM",
-      },
-      {
-        name: "Giordano Sagucio",
-        description: "Fly phishing",
-        start: "3:00PM",
-        end: "4:00PM",
+        name: "TBA",
+        description: "",
+        start: "",
+        end: "",
       },
     ],
   },
@@ -227,11 +168,16 @@ function TimeSlots({ day, className }: { day: Day; className?: string }) {
             <time dateTime={`${day.dateTime}T${timeSlot.start}-08:00`}>
               {timeSlot.start}
             </time>{" "}
-            -{" "}
-            <time dateTime={`${day.dateTime}T${timeSlot.end}-08:00`}>
-              {timeSlot.end}
-            </time>{" "}
-            PST
+            {timeSlot.end &&
+              (
+                <>
+                  -{" "}
+                  <time dateTime={`${day.dateTime}T${timeSlot.end}-08:00`}>
+                    {timeSlot.end}
+                  </time>
+                  {" "}
+                </>
+              )}
           </p>
         </li>
       ))}
@@ -241,7 +187,7 @@ function TimeSlots({ day, className }: { day: Day; className?: string }) {
 
 function ScheduleStatic() {
   return (
-    <div className="hidden lg:grid lg:grid-cols-2 lg:gap-x-8">
+    <div className="hidden lg:grid lg:grid-cols-3 lg:gap-x-8">
       {schedule.map((day) => (
         <section key={day.dateTime}>
           <DaySummary day={day} />
@@ -258,13 +204,10 @@ export function Schedule() {
       <Container className="relative z-10">
         <div className="mx-auto max-w-2xl lg:mx-0 lg:max-w-4xl lg:pr-24">
           <h2 className="font-display text-4xl font-medium tracking-tighter text-blue-600 sm:text-5xl">
-            Our three day schedule is jam-packed with brilliant, creative, evil
-            geniuses.
+            Schedule
           </h2>
           <p className="mt-4 font-display text-2xl tracking-tight text-blue-900">
-            The worst people in our industry giving the best talks you’ve ever
-            seen. Nothing will be recorded and every attendee has to sign an NDA
-            to watch the talks.
+            Schedule is still tentative and subject to change.
           </p>
         </div>
       </Container>
