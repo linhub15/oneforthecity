@@ -92,7 +92,7 @@ function ScheduleTabbed() {
               <div
                 key={day.dateTime}
                 className={clsx(
-                  "relative w-3/4 flex-none pr-4 sm:w-auto sm:pr-0",
+                  "relative w-1/2 flex-none pr-4 sm:w-auto sm:pr-0",
                   dayIndex !== selectedIndex && "opacity-70",
                 )}
               >

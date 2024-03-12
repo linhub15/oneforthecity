@@ -1,8 +1,8 @@
 import Image from "next/image";
 
-import { Button } from "@/components/Button";
 import { Container } from "@/components/Container";
 import backgroundImage from "@/images/background-newsletter.jpg";
+import instagramImage from "@/images/logos/instagram.svg";
 
 function ArrowRightIcon(props: React.ComponentPropsWithoutRef<"svg">) {
   return (
@@ -38,30 +38,29 @@ export function Newsletter() {
                 Stay up to date
               </p>
               <p className="mt-4 text-lg tracking-tight text-blue-900">
-                Get updates on all of our events and be the first to get
+                Get updates on One for the City and be the first to get
                 notified when tickets go on sale.
               </p>
             </div>
-            <form>
+            <div>
               <h3 className="text-lg font-semibold tracking-tight text-blue-900">
-                Sign up to our newsletter <span aria-hidden="true">&darr;</span>
+                Follow us on socials <span aria-hidden="true">&darr;</span>
               </h3>
-              <div className="mt-5 flex rounded-3xl bg-white py-2.5 pr-2.5 shadow-xl shadow-blue-900/5 focus-within:ring-2 focus-within:ring-blue-900">
-                <input
-                  type="email"
-                  required
-                  placeholder="Email address"
-                  aria-label="Email address"
-                  className="-my-2.5 flex-auto bg-transparent pl-6 pr-2.5 text-base text-slate-900 placeholder:text-slate-400 focus:outline-none"
-                />
-                <Button type="submit">
-                  <span className="sr-only sm:not-sr-only">Sign up today</span>
-                  <span className="sm:hidden">
-                    <ArrowRightIcon className="h-6 w-6" />
-                  </span>
-                </Button>
+              <div className="py-10">
+                <a
+                  className="inline-block px-6 py-4 rounded-lg bg-indigo-600 text-white font-semibold bg-opacity-80"
+                  href="https://www.instagram.com/oneforthecity/"
+                  target="_blank"
+                >
+                  <Image
+                    className="inline w-6"
+                    src={instagramImage}
+                    alt="Instagram logo"
+                  />{" "}
+                  @oneforthecity
+                </a>
               </div>
-            </form>
+            </div>
           </div>
         </div>
       </Container>

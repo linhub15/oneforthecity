@@ -1,19 +1,16 @@
 import Image, { StaticImageData } from "next/image";
 
 import { Container } from "@/components/Container";
-import logoLaravel from "@/images/logos/laravel.svg";
-import logoMirage from "@/images/logos/mirage.svg";
-import logoStatamic from "@/images/logos/statamic.svg";
-import logoStaticKit from "@/images/logos/statickit.svg";
-import logoTransistor from "@/images/logos/transistor.svg";
-import logoTuple from "@/images/logos/tuple.svg";
+import stanceImage from "@/images/sponsors/stance.png";
 
 type Sponsor = {
   name: string;
   logo: StaticImageData;
   link: string;
 };
-const sponsors: Sponsor[] = [];
+const sponsors: Sponsor[] = [
+  { name: "Stance elements", logo: stanceImage, link: "" },
+];
 
 export function Sponsors() {
   return (
@@ -43,7 +40,7 @@ export function Sponsors() {
               key={sponsor.name}
               className="flex items-center justify-center"
             >
-              <Image src={sponsor.logo} alt={sponsor.name} unoptimized />
+              <Image className="w-40" src={sponsor.logo} alt={sponsor.name} unoptimized />
             </div>
           ))}
         </div>

@@ -28,27 +28,27 @@ const categories: People[] = [
       {
         name: "TBA",
         role: "Dj",
-        image: undefined,
+        image: unknownImage,
       },
       {
         name: "TBA",
         role: "Dj",
-        image: undefined,
+        image: unknownImage,
       },
       {
         name: "TBA",
         role: "Emcee",
-        image: undefined,
+        image: unknownImage,
       },
       {
         name: "TBA",
         role: "Emcee",
-        image: undefined,
+        image: unknownImage,
       },
     ],
   },
   {
-    name: "Breaking Judges",
+    name: "Judges",
     people: [
       {
         name: "Curtis",
@@ -59,32 +59,45 @@ const categories: People[] = [
       {
         name: "TBA",
         role: "Breaking Judge",
-        image: undefined,
+        image: unknownImage,
       },
       {
         name: "TBA",
         role: "Breaking Judge",
-        image: undefined,
+        image: unknownImage,
+      },
+      {
+        name: "TBA",
+        role: "Open Style Judge",
+        image: unknownImage,
+      },
+      {
+        name: "TBA",
+        role: "Open Style Judge",
+        image: unknownImage,
+      },
+      {
+        name: "TBA",
+        role: "Open Style Judge",
+        image: unknownImage,
       },
     ],
   },
   {
-    name: "Open Style Judges",
+    name: "Breaking Crews",
     people: [
       {
         name: "TBA",
-        role: "Open Style Judge",
-        image: undefined,
+        role: "",
       },
+    ],
+  },
+  {
+    name: "Open Styles Crews",
+    people: [
       {
         name: "TBA",
-        role: "Open Style Judge",
-        image: undefined,
-      },
-      {
-        name: "TBA",
-        role: "Open Style Judge",
-        image: undefined,
+        role: "",
       },
     ],
   },
@@ -132,15 +145,15 @@ export function People() {
 
   return (
     <section
-      id="speakers"
-      aria-labelledby="speakers-title"
+      id="people"
+      aria-labelledby="people-title"
       className="py-20 sm:py-32"
     >
       <ImageClipPaths id={id} />
       <Container>
         <div className="mx-auto max-w-2xl lg:mx-0">
           <h2
-            id="speakers-title"
+            id="people-title"
             className="font-display text-4xl font-medium tracking-tighter text-blue-600 sm:text-5xl"
           >
             Who's coming?
@@ -200,30 +213,32 @@ export function People() {
               >
                 {category.people.map((person, index) => (
                   <div key={index}>
-                    <div className="group relative h-[17.5rem] transform overflow-hidden rounded-4xl">
-                      <div
-                        className={clsx(
-                          "absolute bottom-6 left-0 right-4 top-0 rounded-4xl border transition duration-300 group-hover:scale-95 xl:right-6",
-                          [
-                            "border-blue-300",
-                            "border-indigo-300",
-                            "border-sky-300",
-                          ][index % 3],
-                        )}
-                      />
-                      <div
-                        className="absolute inset-0 bg-indigo-50"
-                        style={{ clipPath: `url(#${id}-${index % 3})` }}
-                      >
-                        <Image
-                          className="absolute inset-0 h-full w-full object-cover transition duration-300 group-hover:scale-110"
-                          src={person.image ?? unknownImage}
-                          alt=""
-                          priority
-                          sizes="(min-width: 1280px) 17.5rem, (min-width: 1024px) 25vw, (min-width: 768px) 33vw, (min-width: 640px) 50vw, 100vw"
+                    {person.image && (
+                      <div className="group relative h-[17.5rem] transform overflow-hidden rounded-4xl">
+                        <div
+                          className={clsx(
+                            "absolute bottom-6 left-0 right-4 top-0 rounded-4xl border transition duration-300 group-hover:scale-95 xl:right-6",
+                            [
+                              "border-blue-300",
+                              "border-indigo-300",
+                              "border-sky-300",
+                            ][index % 3],
+                          )}
                         />
+                        <div
+                          className="absolute inset-0 bg-indigo-50"
+                          style={{ clipPath: `url(#${id}-${index % 3})` }}
+                        >
+                          <Image
+                            className="absolute inset-0 h-full w-full object-cover transition duration-300 group-hover:scale-110"
+                            src={person.image ?? unknownImage}
+                            alt=""
+                            priority
+                            sizes="(min-width: 1280px) 17.5rem, (min-width: 1024px) 25vw, (min-width: 768px) 33vw, (min-width: 640px) 50vw, 100vw"
+                          />
+                        </div>
                       </div>
-                    </div>
+                    )}
                     <h3 className="mt-8 font-display text-xl font-bold tracking-tight text-slate-900">
                       {person.name}
                     </h3>
