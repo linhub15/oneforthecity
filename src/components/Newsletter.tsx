@@ -44,7 +44,7 @@ export function Newsletter() {
             </div>
             <div>
               <h3 className="text-lg font-semibold tracking-tight text-blue-900">
-                Follow us on socials <span aria-hidden="true">&darr;</span>
+                Follow us <span className="inline-block animate-bounce" aria-hidden="true">&darr;</span>
               </h3>
               <div className="py-10">
                 <a
