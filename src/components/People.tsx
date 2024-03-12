@@ -9,6 +9,7 @@ import { Container } from "@/components/Container";
 import { DiamondIcon } from "@/components/DiamondIcon";
 import unknownImage from "@/images/avatars/unknown.png";
 import curtisImage from "@/images/avatars/curtis.jpg";
+import Link from "next/link";
 
 type People = {
   name: string;
@@ -51,8 +52,8 @@ const categories: People[] = [
     name: "Judges",
     people: [
       {
-        name: "Curtis",
-        role: "Breaking Judge",
+        name: "Curtis Siu",
+        role: "Breaking Judge (Vancouver)",
         image: curtisImage,
         instagram: "straycurt",
       },
@@ -102,6 +103,10 @@ const categories: People[] = [
     ],
   },
 ];
+
+function InstagramLink({ username }: { username?: string }) {
+  return <Link href={`https://instagram.com/${username}`} target="_blank">@{username}</Link>;
+}
 
 function ImageClipPaths({
   id,
@@ -160,7 +165,7 @@ export function People() {
           </h2>
           <p className="mt-4 font-display text-2xl tracking-tight text-blue-900">
             We're excited to welcome special guests to be part of this year's
-            One for the City.
+            One for the City. Registered crews will also show up here.
           </p>
         </div>
         <Tab.Group
@@ -241,6 +246,11 @@ export function People() {
                     )}
                     <h3 className="mt-8 font-display text-xl font-bold tracking-tight text-slate-900">
                       {person.name}
+                      {person.instagram && (
+                        <span className="text-slate-600 font-normal text-lg pl-3">
+                          <InstagramLink username={person.instagram} />
+                        </span>
+                      )}
                     </h3>
                     <p className="mt-1 text-base tracking-tight text-slate-500">
                       {person.role}

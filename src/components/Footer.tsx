@@ -9,7 +9,7 @@ export function Footer() {
         <Link href="/">
           <Logo />
         </Link>
-        <p className="mt-6 text-base text-slate-500 md:mt-0">
+        <p className="mt-6 text-base text-center text-slate-500 md:mt-0">
           Copyright &copy; {new Date().getFullYear()}{" "}
           Mahol Arts Ltd. All rights reserved.
         </p>
