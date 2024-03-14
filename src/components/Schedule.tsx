@@ -207,7 +207,6 @@ export function Schedule() {
             Schedule
           </h2>
           <p className="mt-4 font-display text-2xl tracking-tight text-blue-900">
-            Schedule is still tentative and subject to change.
           </p>
         </div>
       </Container>

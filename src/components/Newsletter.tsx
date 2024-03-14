@@ -38,8 +38,7 @@ export function Newsletter() {
                 Stay up to date
               </p>
               <p className="mt-4 text-lg tracking-tight text-blue-900">
-                Get updates on One for the City and be the first to get
-                notified when tickets go on sale.
+                Be the first to get updates on One for the City.
               </p>
             </div>
             <div>

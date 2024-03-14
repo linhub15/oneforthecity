@@ -14,19 +14,31 @@ export function Hero() {
           </h1>
           <div className="mt-6 space-y-6 font-display text-2xl tracking-tight text-blue-900">
             <p>
-              One for the City is street dance event founded in 2021 and
-              dedicated to fostering the Alberta street dance community. Over
-              the past three years we have created a platform that not only
-              provides performance and development opportunities for street
-              dance artists but also expands access for the broader public.
-              Rooted in Hip-hop culture the event includes battles,
-              performances, and opportunities for training, and fostering
-              cultural connections.
+              One for the City was founded in 2021, with the aim of supporting
+              the street dance community.{" "}
+              <abbr title="One for the City">OFTC</abbr>{" "}
+              exceeded expectations by providing opportunities to battle, learn
+              and connect with local, national and international street dance
+              educators. Battles are deeply rooted in Hip-Hop culture, and are
+              central to{" "}
+              <abbr title="One for the City">OFTC</abbr>, celebrating Hip-Hop
+              values like Love, Peace, Unity, and Having Fun. Through
+              collaborations and grassroots efforts,{" "}
+              <abbr title="One for the City">OFTC</abbr>{" "}
+              has facilitated city-cyphers, freestyle sessions and workshops to
+              more than four cities in Canada over the past three years.
             </p>
             <p>
-              This year marks the fourth volume, and back in our home town
-              Edmonton. With two day event will allow us to have more
-              cyphers, workshops and community exchange.
+              As we reflect on the success of previous{" "}
+              <abbr title="One for the City">OFTC</abbr>{" "}
+              events and their positive impacts on the street dance community,
+              we are thrilled to announce the fourth volume on June 29th and
+              30th, 2024 in Edmonton. With a two day event,{"  "}
+              <abbr title="One for the City">OFTC</abbr>{" "}
+              promises even more opportunities for artists to showcase their
+              skills, connect with peers, and learn from industry professionals.
+              This season, let's enhance the vibrant street dance culture in
+              Alberta and beyond.
             </p>
           </div>
           <Button href="/tickets" className="mt-10 w-full sm:hidden">
@@ -49,7 +61,7 @@ export function Hero() {
         </div>
         <div className="mx-auto max-w-2xl lg:max-w-4xl lg:px-12 flex justify-center pt-12">
           <iframe
-          className="rounded-xl shadow w-full h-72 lg:h-96"
+            className="rounded-xl shadow w-full h-72 lg:h-96"
             src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d9491.3685338932!2d-113.5099987!3d53.5070154!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x53a021ffa16b56c5%3A0x78ca962164391760!2sSt%20Basil&#39;s%20Cultural%20Centre!5e0!3m2!1sen!2sca!4v1710199056276!5m2!1sen!2sca"
             width="600"
             style={{ border: 0 }}

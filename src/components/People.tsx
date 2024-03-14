@@ -165,7 +165,7 @@ export function People() {
           </h2>
           <p className="mt-4 font-display text-2xl tracking-tight text-blue-900">
             We're excited to welcome special guests to be part of this year's
-            One for the City. Registered crews will also show up here.
+            One for the City. Registered crews will also be listed.
           </p>
         </div>
         <Tab.Group
