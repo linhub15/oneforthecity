@@ -49,8 +49,8 @@ export default function Tickets() {
         <div className="py-10">
           <script async src="https://js.stripe.com/v3/pricing-table.js" />
           <stripe-pricing-table
-            pricing-table-id="prctbl_1OsVONIuLhs6aDZvWFXNoNlT"
-            publishable-key="pk_test_51Of8xFIuLhs6aDZvJHEe5pFdEUzgm7jK7tST4TdPSt4y3ZbkAzOoTXsHkJUZZb0TeJWHCHOBLWg4Z69cXc8xUApu00L0v97Usa"
+            pricing-table-id="prctbl_1OuiZtIuLhs6aDZvwKgstomU"
+            publishable-key="pk_live_51Of8xFIuLhs6aDZvuRfTDAtLKfHYsyece1sUEwvgaN34Yft9ygktKedK0sp2YqYfjOV1pfWdj7j8lSgLUyKXbe0r00JriKehqV"
           />
         </div>
       </div>
