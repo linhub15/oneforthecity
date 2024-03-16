@@ -38,12 +38,6 @@ export default function Tickets() {
               today and prepare to be captivated by the incredible talent and
               enthusiasm of the street dance community at OFTC!
             </p>
-            <p className="text-slate-800 tracking-tight">
-              Pre-sales open on March 23, 2024. Once your registration been
-              submitted, you will receive a confirmation email. Thank you for
-              joining us, and we look forward to seeing you and your crew at the
-              event!
-            </p>
           </div>
         </div>
         <div className="py-10">
