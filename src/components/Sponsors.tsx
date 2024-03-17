@@ -45,7 +45,7 @@ export function Sponsors() {
             >
               contact@oneforthecity.com
             </a>{" "}
-            for information on partnering or becoming a sponsoring.
+            for information on partnering or becoming a sponsor.
           </p>
         </div>
       </Container>
