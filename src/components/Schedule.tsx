@@ -23,7 +23,7 @@ const schedule: Array<Day> = [
   {
     date: "June 29",
     dateTime: "2024-06-29",
-    summary: "Prelims to Top 8",
+    summary: "Cypher & Prelims",
     timeSlots: [
       {
         name: "Start",
@@ -36,7 +36,7 @@ const schedule: Array<Day> = [
   {
     date: "June 30",
     dateTime: "2024-06-30",
-    summary: "Top 8 & Finals",
+    summary: "Top 8 to Finals",
     timeSlots: [
       {
         name: "Start",
