@@ -15,8 +15,8 @@ export default function Tickets() {
           </Link>
         }
       />
-      <div className="mt-10 md:mt-20 w-full mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 relative space-y-12">
-        <div className="mx-auto max-w-2xl lg:mx-0 space-y-4">
+      <div className="mt-10 md:mt-20 px-4 sm:px-6 lg:px-8 relative space-y-12">
+        <div className="mx-auto w-full max-w-2xl  space-y-4">
           <h2
             id="speakers-title"
             className="font-display text-4xl font-medium tracking-tighter text-blue-600 sm:text-5xl"
