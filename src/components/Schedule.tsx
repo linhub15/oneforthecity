@@ -14,8 +14,9 @@ interface Day {
   timeSlots: Array<{
     name: string;
     description: string | null;
-    start: string;
-    end: string;
+    start?: string;
+    end?: string;
+    duration?: string;
   }>;
 }
 
@@ -26,10 +27,54 @@ const schedule: Array<Day> = [
     summary: "Cypher & Prelims",
     timeSlots: [
       {
-        name: "Start",
+        name: "Doors Open",
+        description: "Crew check-in",
+        start: "12:30PM",
+      },
+      {
+        name: "Event Start",
         description: "",
-        start: "1:00PM",
-        end: "",
+        start: "1:30PM",
+      },
+      {
+        name: "Block 1 - Open Styles",
+        description: "4 battles (15 min each)",
+        start: "1:35PM",
+      },
+      {
+        name: "Cypher - Breaking",
+        description: "Block 2 check-in",
+        start: "2:55PM",
+      },
+      {
+        name: "Block 2 - Breaking",
+        description: "4 battles (15 min each)",
+        start: "2:15PM",
+      },
+      {
+        name: "Cypher - Open Styles",
+        description: "Block 3 check-in",
+        start: "4:35PM",
+      },
+      {
+        name: "Block 3 - Open Styles",
+        description: "4 battles (15 min each)",
+        start: "4:55PM",
+      },
+      {
+        name: "Cypher - Breaking",
+        description: "Block 4 check-in",
+        start: "6:15PM",
+      },
+      {
+        name: "Block 4 - Breaking",
+        description: "4 battles (15 min each)",
+        start: "6:35PM",
+      },
+      {
+        name: "Day End",
+        description: "",
+        start: "7:55PM",
       },
     ],
   },
@@ -39,10 +84,51 @@ const schedule: Array<Day> = [
     summary: "Top 8 to Finals",
     timeSlots: [
       {
+        name: "Doors Open",
+        description: "",
+        start: "12:30PM",
+      },
+      {
         name: "Start",
         description: "",
-        start: "1:00PM",
-        end: "",
+        start: "1:30PM",
+      },
+      {
+        name: "Top 8 - Open Styles",
+        description: "15 min each",
+        start: "1:35PM",
+      },
+      {
+        name: "Cypher - Breaking",
+        description: "",
+        start: "2:35PM",
+      },
+      {
+        name: "Top 8 - Breaking",
+        description: "15 min each",
+        start: "3:15PM",
+        end: "4:35PM"
+      },
+      {
+        name: "Top 4 - Open Styles",
+        description: "15 min each",
+      },
+      {
+        name: "Top 4 - Breaking",
+        description: "15 min each",
+      },
+      {
+        name: "Finals - Open Styles",
+        description: "15 min each",
+      },
+      {
+        name: "Finals - Breaking",
+        description: "15 min each",
+      },
+      {
+        name: "Event End",
+        description: "",
+        start: "6:45PM"
       },
     ],
   },
@@ -151,7 +237,7 @@ function TimeSlots({ day, className }: { day: Day; className?: string }) {
       {day.timeSlots.map((timeSlot, timeSlotIndex) => (
         <li
           key={timeSlot.start}
-          aria-label={`${timeSlot.name} talking about ${timeSlot.description} at ${timeSlot.start} - ${timeSlot.end} PST`}
+          aria-label={`${timeSlot.name} talking about ${timeSlot.description} at ${timeSlot.start} - ${timeSlot.end}`}
         >
           {timeSlotIndex > 0 && (
             <div className="mx-auto mb-8 h-px w-48 bg-indigo-500/10" />
@@ -165,9 +251,12 @@ function TimeSlots({ day, className }: { day: Day; className?: string }) {
             </p>
           )}
           <p className="mt-1 font-mono text-sm text-slate-500">
-            <time dateTime={`${day.dateTime}T${timeSlot.start}-08:00`}>
-              {timeSlot.start}
-            </time>{" "}
+            {timeSlot.start && (
+              <time dateTime={`${day.dateTime}T${timeSlot.start}-08:00`}>
+                {timeSlot.start}
+                {" "}
+              </time>
+            )}
             {timeSlot.end &&
               (
                 <>
@@ -178,6 +267,7 @@ function TimeSlots({ day, className }: { day: Day; className?: string }) {
                   {" "}
                 </>
               )}
+            {timeSlot.duration && ` (${timeSlot.duration})`}
           </p>
         </li>
       ))}
