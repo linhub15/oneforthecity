@@ -107,7 +107,7 @@ const schedule: Array<Day> = [
         name: "Top 8 - Breaking",
         description: "15 min each",
         start: "3:15PM",
-        end: "4:35PM"
+        end: "4:35PM",
       },
       {
         name: "Top 4 - Open Styles",
@@ -128,7 +128,7 @@ const schedule: Array<Day> = [
       {
         name: "Event End",
         description: "",
-        start: "6:45PM"
+        start: "6:45PM",
       },
     ],
   },
@@ -236,7 +236,7 @@ function TimeSlots({ day, className }: { day: Day; className?: string }) {
     >
       {day.timeSlots.map((timeSlot, timeSlotIndex) => (
         <li
-          key={timeSlot.start}
+          key={timeSlotIndex}
           aria-label={`${timeSlot.name} talking about ${timeSlot.description} at ${timeSlot.start} - ${timeSlot.end}`}
         >
           {timeSlotIndex > 0 && (

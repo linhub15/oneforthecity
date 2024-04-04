@@ -9,6 +9,7 @@ type Hotel = {
   price: string;
   name: string;
   address: string;
+  link: string;
   description: string;
 };
 
@@ -19,6 +20,7 @@ export function Hotels() {
       room: "Double Room",
       price: "$78/night",
       address: "4009 Gateway blvd NW",
+      link: "https://maps.app.goo.gl/GjAjM7p9q1Ld5idq7",
       img: economy_inn,
       description: "Use promo code Eco4009",
     },
@@ -27,6 +29,7 @@ export function Hotels() {
       room: "Double Room",
       price: "$90/night",
       address: "3815 Gateway blvd NW",
+      link: "https://maps.app.goo.gl/xkEX3rqmMZj9Cu6DA",
       img: royal_lodge,
       description:
         "Call 780-756-6810 & let them know you're booking with One for the City",
@@ -70,7 +73,7 @@ function Card({ hotel }: { hotel: Hotel }) {
             {hotel.name} •{" "}
             <span className="font-normal text-gray-800">{hotel.room}</span>
           </h3>
-          <p className="mt-1 text-sm text-gray-500">{hotel.address}</p>
+          <a className="mt-1 text-sm text-gray-500" href={hotel.link} target="_blank">{hotel.address}</a>
           <p className="mt-1 text-sm text-gray-500">{hotel.description}</p>
         </div>
         <div className="absolute inset-x-0 top-0 flex h-72 items-end justify-end overflow-hidden rounded-lg p-4">
