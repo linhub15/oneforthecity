@@ -1,6 +1,7 @@
 import { type Metadata } from "next";
 import { DM_Sans, Inter } from "next/font/google";
 import clsx from "clsx";
+import logo from "@/images/brand/logo.jpg";
 
 import "@/styles/tailwind.css";
 
@@ -40,6 +41,26 @@ export default function RootLayout({
         dmSans.variable,
       )}
     >
+      <head>
+        <meta property="og:url" content="https://oneforthecity.com" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="One for the City" />
+        <meta
+          property="og:description"
+          content="Open style and breaking crew versus crew battle on June 29-30, 2024 in Edmonton, AB."
+        />
+        <meta property="og:image" content={logo.src} />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta property="twitter:domain" content="oneforthecity.com" />
+        <meta property="twitter:url" content="https://oneforthecity.com" />
+        <meta name="twitter:title" content="One for the City" />
+        <meta
+          name="twitter:description"
+          content="Open style and breaking crew versus crew battle on June 29-30, 2024 in Edmonton, AB."
+        />
+        <meta name="twitter:image" content={logo.src} />
+      </head>
       <body className="flex min-h-full">
         <div className="flex w-full flex-col">{children}</div>
       </body>
