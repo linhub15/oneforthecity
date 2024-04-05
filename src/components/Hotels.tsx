@@ -43,7 +43,7 @@ export function Hotels() {
             Hotels
           </h2>
           <p className="mt-4 font-display text-2xl tracking-tight text-blue-900">
-            Discounted accomodations for out-of-town competitors. Limited spots
+            Discounted accommodations for out-of-town competitors. Limited spots
             available. First come first serve.
           </p>
         </div>
