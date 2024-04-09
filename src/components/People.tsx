@@ -88,7 +88,11 @@ const categories: People[] = [
     name: "Breaking Crews",
     people: [
       {
-        name: "TBA",
+        name: "Alpha Kids",
+        role: "",
+      },
+      {
+        name: "Raw Honey",
         role: "",
       },
     ],
@@ -97,7 +101,7 @@ const categories: People[] = [
     name: "Open Styles Crews",
     people: [
       {
-        name: "TBA",
+        name: "Raw Honey",
         role: "",
       },
     ],
@@ -105,7 +109,11 @@ const categories: People[] = [
 ];
 
 function InstagramLink({ username }: { username?: string }) {
-  return <Link href={`https://instagram.com/${username}`} target="_blank">@{username}</Link>;
+  return (
+    <Link href={`https://instagram.com/${username}`} target="_blank">
+      @{username}
+    </Link>
+  );
 }
 
 function ImageClipPaths({
