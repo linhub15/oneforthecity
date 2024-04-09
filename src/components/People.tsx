@@ -9,6 +9,7 @@ import { Container } from "@/components/Container";
 import { DiamondIcon } from "@/components/DiamondIcon";
 import unknownImage from "@/images/avatars/unknown.png";
 import curtisImage from "@/images/avatars/curtis.jpg";
+import dizzylockImage from "@/images/avatars/dizzylock.jpg";
 import Link from "next/link";
 
 type People = {
@@ -68,9 +69,10 @@ const categories: People[] = [
         image: unknownImage,
       },
       {
-        name: "TBA",
-        role: "Open Style Judge",
-        image: unknownImage,
+        name: "Dizzylock",
+        role: "Open Style Judge (Montreal)",
+        image: dizzylockImage,
+        instagram: "dizzylock",
       },
       {
         name: "TBA",
