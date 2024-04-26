@@ -8,8 +8,12 @@ import clsx from "clsx";
 import { Container } from "@/components/Container";
 import { DiamondIcon } from "@/components/DiamondIcon";
 import unknownImage from "@/images/avatars/unknown.png";
+
+import djroxswiftImage from "@/images/avatars/djroxswift.jpg";
+import djbennyImage from "@/images/avatars/djbenny.jpg";
 import curtisImage from "@/images/avatars/curtis.jpg";
 import dizzylockImage from "@/images/avatars/dizzylock.jpg";
+import slimBoogieImage from "@/images/avatars/slim-boogie.jpg";
 import Link from "next/link";
 
 type People = {
@@ -28,14 +32,16 @@ const categories: People[] = [
     name: "Hosts & DJs",
     people: [
       {
-        name: "TBA",
-        role: "Dj",
-        image: unknownImage,
+        name: "Roxswift",
+        role: "Dj (Los Angeles)",
+        image: djroxswiftImage,
+        instagram: "roxswift",
       },
       {
-        name: "TBA",
-        role: "Dj",
-        image: unknownImage,
+        name: "Benny Lava",
+        role: "Dj (Montreal)",
+        image: djbennyImage,
+        instagram: "djbennylava",
       },
       {
         name: "TBA",
@@ -75,9 +81,10 @@ const categories: People[] = [
         instagram: "dizzylock",
       },
       {
-        name: "TBA",
-        role: "Open Style Judge",
-        image: unknownImage,
+        name: "Slim Boogie",
+        role: "Open Style Judge (Los Angeles)",
+        image: slimBoogieImage,
+        instagram: "slimboogie777",
       },
       {
         name: "TBA",
@@ -97,6 +104,10 @@ const categories: People[] = [
         name: "Raw Honey",
         role: "",
       },
+      {
+        name: "Team Mayhem",
+        role: "",
+      },
     ],
   },
   {
@@ -104,6 +115,10 @@ const categories: People[] = [
     people: [
       {
         name: "Raw Honey",
+        role: "",
+      },
+      {
+        name: "Team Mayhem",
         role: "",
       },
     ],
