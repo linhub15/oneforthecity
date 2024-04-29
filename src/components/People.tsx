@@ -12,6 +12,7 @@ import unknownImage from "@/images/avatars/unknown.png";
 import djroxswiftImage from "@/images/avatars/djroxswift.jpg";
 import djbennyImage from "@/images/avatars/djbenny.jpg";
 import curtisImage from "@/images/avatars/curtis.jpg";
+import ynotImage from "@/images/avatars/ynot.jpg";
 import dizzylockImage from "@/images/avatars/dizzylock.jpg";
 import slimBoogieImage from "@/images/avatars/slim-boogie.jpg";
 import Link from "next/link";
@@ -65,9 +66,10 @@ const categories: People[] = [
         instagram: "straycurt",
       },
       {
-        name: "TBA",
+        name: "YNOT",
         role: "Breaking Judge",
-        image: unknownImage,
+        image: ynotImage,
+        instagram: "ynotism",
       },
       {
         name: "TBA",
