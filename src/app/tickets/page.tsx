@@ -16,7 +16,7 @@ export default function Tickets() {
         }
       />
       <div className="mt-10 md:mt-20 px-4 sm:px-6 lg:px-8 relative space-y-12">
-        <div className="mx-auto w-full max-w-2xl  space-y-4">
+        <div className="mx-auto w-full max-w-2xl space-y-4">
           <h2
             id="speakers-title"
             className="font-display text-4xl font-medium tracking-tighter text-blue-600 sm:text-5xl"
@@ -40,8 +40,15 @@ export default function Tickets() {
             </p>
           </div>
         </div>
-        <div className="py-10">
+
+        <div>
           <script async src="https://js.stripe.com/v3/pricing-table.js" />
+          <stripe-pricing-table
+            pricing-table-id="prctbl_1PLvUYIuLhs6aDZvpxI9Akzd"
+            publishable-key="pk_live_51Of8xFIuLhs6aDZvuRfTDAtLKfHYsyece1sUEwvgaN34Yft9ygktKedK0sp2YqYfjOV1pfWdj7j8lSgLUyKXbe0r00JriKehqV"
+          >
+          </stripe-pricing-table>
+
           <stripe-pricing-table
             pricing-table-id="prctbl_1OuiZtIuLhs6aDZvwKgstomU"
             publishable-key="pk_live_51Of8xFIuLhs6aDZvuRfTDAtLKfHYsyece1sUEwvgaN34Yft9ygktKedK0sp2YqYfjOV1pfWdj7j8lSgLUyKXbe0r00JriKehqV"
