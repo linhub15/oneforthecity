@@ -110,17 +110,42 @@ const categories: People[] = [
         name: "Team Mayhem",
         role: "",
       },
+      {
+        name: "TM",
+        role: "",
+      },
     ],
   },
   {
     name: "Open Styles Crews",
     people: [
       {
+        name: "393 Dance Troupe",
+        role: "",
+      },
+      {
+        name: "Octagram",
+        role: "",
+      },
+      {
+        name: "Pound it",
+        role: "",
+      },
+      {
         name: "Raw Honey",
         role: "",
       },
       {
         name: "Team Mayhem",
+        role: "",
+      },
+      {
+        name: "The Misfits",
+        role: "",
+      },
+
+      {
+        name: "Working title",
         role: "",
       },
     ],
