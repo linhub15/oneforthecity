@@ -110,6 +110,10 @@ const categories: People[] = [
         name: "TM",
         role: "",
       },
+      {
+        name: "Crazy Time",
+        role: "",
+      },
     ],
   },
   {
