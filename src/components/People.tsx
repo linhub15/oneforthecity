@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useId, useState } from "react";
-import Image, { StaticImageData } from "next/image";
+import Image, { type StaticImageData } from "next/image";
 import { Tab } from "@headlessui/react";
 import clsx from "clsx";
 
@@ -15,6 +15,9 @@ import curtisImage from "@/images/avatars/curtis.jpg";
 import ynotImage from "@/images/avatars/ynot.jpg";
 import dizzylockImage from "@/images/avatars/dizzylock.jpg";
 import slimBoogieImage from "@/images/avatars/slim-boogie.jpg";
+import jinImage from "@/images/avatars/jin.png";
+import jamalAliImage from "@/images/avatars/jamal-ali.png";
+import genieImage from "@/images/avatars/genie.png";
 import Link from "next/link";
 
 type People = {
@@ -30,7 +33,7 @@ type Person = {
 };
 const categories: People[] = [
   {
-    name: "Hosts & DJs",
+    name: "DJ MC & Judges",
     people: [
       {
         name: "Roxswift",
@@ -45,20 +48,11 @@ const categories: People[] = [
         instagram: "djbennylava",
       },
       {
-        name: "TBA",
-        role: "Emcee",
-        image: unknownImage,
+        name: "Genie Baffoe",
+        role: "Emcee (Winnipeg)",
+        image: genieImage,
+        instagram: "genieboss",
       },
-      {
-        name: "TBA",
-        role: "Emcee",
-        image: unknownImage,
-      },
-    ],
-  },
-  {
-    name: "Judges",
-    people: [
       {
         name: "Curtis Siu",
         role: "Breaking Judge (Vancouver)",
@@ -67,14 +61,15 @@ const categories: People[] = [
       },
       {
         name: "YNOT",
-        role: "Breaking Judge",
+        role: "Breaking Judge (New Jersey)",
         image: ynotImage,
         instagram: "ynotism",
       },
       {
-        name: "TBA",
-        role: "Breaking Judge",
-        image: unknownImage,
+        name: "Jin Lee",
+        role: "Breaking Judge (Edmonton)",
+        image: jinImage,
+        instagram: "jinlehs",
       },
       {
         name: "Dizzylock",
@@ -89,9 +84,10 @@ const categories: People[] = [
         instagram: "slimboogie777",
       },
       {
-        name: "TBA",
-        role: "Open Style Judge",
-        image: unknownImage,
+        name: "Jamal Ali",
+        role: "Open Style Judge (Vancouver)",
+        image: jamalAliImage,
+        instagram: "jamal_ali2000",
       },
     ],
   },
@@ -182,11 +178,11 @@ function ImageClipPaths({
 }
 
 export function People() {
-  let id = useId();
-  let [tabOrientation, setTabOrientation] = useState("horizontal");
+  const id = useId();
+  const [tabOrientation, setTabOrientation] = useState("horizontal");
 
   useEffect(() => {
-    let lgMediaQuery = window.matchMedia("(min-width: 1024px)");
+    const lgMediaQuery = window.matchMedia("(min-width: 1024px)");
 
     function onMediaQueryChange({ matches }: { matches: boolean }) {
       setTabOrientation(matches ? "vertical" : "horizontal");
@@ -231,7 +227,7 @@ export function People() {
               {({ selectedIndex }) => (
                 <>
                   {categories.map((category, index) => (
-                    <div key={index} className="relative lg:pl-8">
+                    <div key={category.name} className="relative lg:pl-8">
                       <DiamondIcon
                         className={clsx(
                           "absolute left-[-0.5px] top-[0.5625rem] hidden h-1.5 w-1.5 overflow-visible lg:block",
@@ -264,12 +260,12 @@ export function People() {
           <Tab.Panels className="lg:col-span-3">
             {categories.map((category, index) => (
               <Tab.Panel
-                key={index}
+                key={category.name}
                 className="grid grid-cols-1 gap-x-8 gap-y-10 ui-not-focus-visible:outline-none sm:grid-cols-2 sm:gap-y-16 md:grid-cols-3"
                 unmount={false}
               >
                 {category.people.map((person, index) => (
-                  <div key={index}>
+                  <div key={person.name}>
                     {person.image && (
                       <div className="group relative h-[17.5rem] transform overflow-hidden rounded-4xl">
                         <div
