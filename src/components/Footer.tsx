@@ -9,10 +9,21 @@ export function Footer() {
         <Link href="/">
           <Logo />
         </Link>
-        <p className="mt-6 text-base text-center text-slate-500 md:mt-0">
-          Copyright &copy; {new Date().getFullYear()}{" "}
-          Mahol Arts Ltd. All rights reserved.
-        </p>
+        <div>
+          <p className="mt-6 text-base text-center text-slate-500 md:mt-0">
+            Copyright &copy; {new Date().getFullYear()}{" "}
+            Mahol Arts Ltd. All rights reserved.
+          </p>
+          <p className="text-sm text-slate-500">
+            Website by{" "}
+            <a
+              className="underline hover:text-slate-400"
+              href="https://www.linkedin.com/in/linhub"
+            >
+              Hubert Lin
+            </a>
+          </p>
+        </div>
       </Container>
     </footer>
   );

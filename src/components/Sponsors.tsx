@@ -1,7 +1,9 @@
-import Image, { StaticImageData } from "next/image";
+import Image, { type StaticImageData } from "next/image";
 
 import { Container } from "@/components/Container";
 import stanceImage from "@/images/sponsors/stance.png";
+import eacImage from "@/images/sponsors/eac.png";;
+import edmontonImage from "@/images/sponsors/edmonton.png";
 
 type Sponsor = {
   name: string;
@@ -10,6 +12,8 @@ type Sponsor = {
 };
 const sponsors: Sponsor[] = [
   { name: "Stance elements", logo: stanceImage, link: "" },
+  { name: "Edmonton Arts Council", logo: eacImage, link: "" },
+  { name: "City of Edmonton", logo: edmontonImage, link: "" },
 ];
 
 export function Sponsors() {
