@@ -49,7 +49,7 @@ const schedule: Array<Day> = [
       {
         name: "Block 2 - Breaking",
         description: "4 battles (15 min each)",
-        start: "2:15PM",
+        start: "3:15PM",
       },
       {
         name: "Cypher - Open Styles",
