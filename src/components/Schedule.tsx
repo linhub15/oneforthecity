@@ -132,26 +132,13 @@ const schedule: Array<Day> = [
       },
     ],
   },
-  {
-    date: "June 30",
-    dateTime: "",
-    summary: "Workshops",
-    timeSlots: [
-      {
-        name: "TBA",
-        description: "",
-        start: "",
-        end: "",
-      },
-    ],
-  },
 ];
 
 function ScheduleTabbed() {
-  let [tabOrientation, setTabOrientation] = useState("horizontal");
+  const [tabOrientation, setTabOrientation] = useState("horizontal");
 
   useEffect(() => {
-    let smMediaQuery = window.matchMedia("(min-width: 640px)");
+    const smMediaQuery = window.matchMedia("(min-width: 640px)");
 
     function onMediaQueryChange({ matches }: { matches: boolean }) {
       setTabOrientation(matches ? "vertical" : "horizontal");
@@ -277,7 +264,7 @@ function TimeSlots({ day, className }: { day: Day; className?: string }) {
 
 function ScheduleStatic() {
   return (
-    <div className="hidden lg:grid lg:grid-cols-3 lg:gap-x-8">
+    <div className="hidden lg:grid lg:grid-cols-2 lg:gap-x-8">
       {schedule.map((day) => (
         <section key={day.dateTime}>
           <DaySummary day={day} />
