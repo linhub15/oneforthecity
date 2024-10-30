@@ -215,7 +215,6 @@ function DaySummary({ day }: { day: Day }) {
 function TimeSlots({ day, className }: { day: Day; className?: string }) {
   return (
     <ol
-      role="list"
       className={clsx(
         className,
         "space-y-8 bg-white/60 px-10 py-14 text-center shadow-xl shadow-blue-900/5 backdrop-blur",
@@ -223,7 +222,7 @@ function TimeSlots({ day, className }: { day: Day; className?: string }) {
     >
       {day.timeSlots.map((timeSlot, timeSlotIndex) => (
         <li
-          key={timeSlotIndex}
+          key={timeSlot.start}
           aria-label={`${timeSlot.name} talking about ${timeSlot.description} at ${timeSlot.start} - ${timeSlot.end}`}
         >
           {timeSlotIndex > 0 && (

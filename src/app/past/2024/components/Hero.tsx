@@ -68,6 +68,7 @@ export function Hero() {
             allowFullScreen={false}
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
+            title="Google map of St. Basil's Cultural Centre"
           />
         </div>
       </Container>

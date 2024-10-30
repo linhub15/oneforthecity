@@ -9,7 +9,7 @@ export default function Tickets() {
         action={
           <Link
             className="underline text-blue-600 hover:bg-blue-100 rounded-xl p-4"
-            href="/"
+            href="../2024"
           >
             Go Home
           </Link>

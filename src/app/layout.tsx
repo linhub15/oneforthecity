@@ -1,4 +1,4 @@
-import { type Metadata } from "next";
+import type { Metadata } from "next";
 import { DM_Sans, Inter } from "next/font/google";
 import clsx from "clsx";
 import logo from "@/images/brand/logo.jpg";

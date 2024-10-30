@@ -1,5 +1,5 @@
-import { Container } from "./Container";
-import Image, { StaticImageData } from "next/image";
+import { Container } from "../../../../components/Container";
+import Image, { type StaticImageData } from "next/image";
 import economy_inn from "@/images/hotels/economy_inn.jpg";
 import royal_lodge from "@/images/hotels/royal_lodge.jpg";
 
@@ -50,7 +50,7 @@ export function Hotels() {
       </Container>
       <Container className="space-y-20">
         <div className="mt-8 grid grid-cols-1 gap-y-12 sm:grid-cols-2 sm:gap-x-6 lg:gap-x-12">
-          {hotels.map((hotel, index) => <Card hotel={hotel} key={index} />)}
+          {hotels.map((hotel, index) => <Card hotel={hotel} key={hotel.name} />)}
         </div>
       </Container>
     </section>
