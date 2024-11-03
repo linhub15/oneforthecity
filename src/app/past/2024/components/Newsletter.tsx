@@ -2,7 +2,7 @@ import Image from "next/image";
 
 import { Container } from "@/components/Container";
 import backgroundImage from "@/images/background-newsletter.jpg";
-import instagramImage from "@/images/logos/instagram.svg";
+import instagramImage from "@/images/icons/instagram.svg";
 
 function ArrowRightIcon(props: React.ComponentPropsWithoutRef<"svg">) {
   return (
@@ -43,13 +43,20 @@ export function Newsletter() {
             </div>
             <div>
               <h3 className="text-lg font-semibold tracking-tight text-blue-900">
-                Follow us <span className="inline-block animate-bounce" aria-hidden="true">&darr;</span>
+                Follow us{" "}
+                <span
+                  className="inline-block animate-bounce"
+                  aria-hidden="true"
+                >
+                  &darr;
+                </span>
               </h3>
               <div className="py-10">
                 <a
                   className="inline-block px-6 py-4 rounded-lg bg-indigo-600 text-white font-semibold bg-opacity-80"
                   href="https://www.instagram.com/oneforthecity/"
                   target="_blank"
+                  rel="noreferrer"
                 >
                   <Image
                     className="inline w-6"
