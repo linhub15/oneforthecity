@@ -13,9 +13,11 @@ export default function Page() {
       <main className="flex-auto">
         <Container className="relative">
           <div className="py-12">
-            <h1 className="font-display text-5xl font-semibold tracking-tighter text-blue-600 sm:text-6xl text-center">
-              One for the City
-            </h1>
+            <div className="rounded-xl flex justify-center py-8">
+              <h1 className="inline-block bg-gradient-to-r from-blue-600 to-blue-400 bg-clip-text text-center font-display text-5xl font-semibold tracking-tighter text-transparent sm:text-7xl">
+                One for the City
+              </h1>
+            </div>
           </div>
 
           <div className="w-full max-w-96 py-16 mx-auto space-y-6">
