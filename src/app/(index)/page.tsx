@@ -9,8 +9,6 @@ export default function Page() {
   return (
     <>
       <Banner />
-      <header className="relative flex-none lg:pt-12">
-      </header>
 
       <main className="flex-auto">
         <Container className="relative">
@@ -23,7 +21,7 @@ export default function Page() {
           <div className="w-full max-w-96 py-16 mx-auto space-y-6">
             <a
               className="inline-flex gap-4 px-8 py-4 w-full items-center rounded-full bg-indigo-50 hover:bg-indigo-100 shadow-sm font-medium bg-opacity-80"
-              href="https://www.instagram.com/oneforthecity/"
+              href="https://lu.ma/oneforthecity"
             >
               <Image
                 className="inline size-6"
@@ -31,7 +29,7 @@ export default function Page() {
                 alt="Luma"
               />
               <span className="text-center">
-                New battles on Luma calendar
+                Events on Luma calendar
               </span>
             </a>
 
