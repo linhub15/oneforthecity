@@ -1,7 +1,8 @@
+import logo from "@/images/brand/logo.jpg";
+import { GoogleAnalytics } from "@next/third-parties/google";
+import clsx from "clsx";
 import type { Metadata } from "next";
 import { DM_Sans, Inter } from "next/font/google";
-import clsx from "clsx";
-import logo from "@/images/brand/logo.jpg";
 
 import "@/styles/tailwind.css";
 
@@ -64,6 +65,7 @@ export default function RootLayout({
       <body className="flex min-h-full">
         <div className="flex w-full flex-col">{children}</div>
       </body>
+      <GoogleAnalytics gaId="G-GFNRPPPC84" />
     </html>
   );
 }
