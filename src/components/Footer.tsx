@@ -12,16 +12,7 @@ export function Footer() {
         <div className="text-center md:text-left">
           <p className="mt-6 text-base text-slate-500 md:mt-0">
             Copyright &copy; {new Date().getFullYear()}{" "}
-            Mahol Arts Ltd.
-          </p>
-          <p className="text-sm text-slate-500">
-            Website by{" "}
-            <a
-              className="underline hover:text-slate-400"
-              href="https://www.linkedin.com/in/linhub"
-            >
-              Hubert Lin
-            </a>
+            One for the City.
           </p>
         </div>
       </Container>
