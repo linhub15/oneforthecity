@@ -14,7 +14,7 @@ export default function Page() {
         <Container className="relative">
           <div className="py-12">
             <div className="rounded-xl flex justify-center py-8">
-              <h1 className="inline-block bg-gradient-to-r from-blue-600 to-blue-400 bg-clip-text text-center font-display text-5xl font-semibold tracking-tighter text-transparent sm:text-7xl">
+              <h1 className="inline-block bg-linear-to-r from-blue-600 to-blue-400 bg-clip-text text-center font-display text-5xl font-semibold tracking-tighter text-transparent sm:text-7xl">
                 One for the City
               </h1>
             </div>
@@ -22,7 +22,7 @@ export default function Page() {
 
           <div className="w-full max-w-96 py-16 mx-auto space-y-6">
             <a
-              className="inline-flex gap-4 px-8 py-4 w-full items-center rounded-full bg-indigo-50 hover:bg-indigo-100 shadow-sm font-medium bg-opacity-80"
+              className="inline-flex gap-4 px-8 py-4 w-full items-center rounded-full bg-indigo-50 hover:bg-indigo-100 shadow-xs font-medium bg-opacity-80"
               href="https://lu.ma/oneforthecity"
             >
               <Image
@@ -36,7 +36,7 @@ export default function Page() {
             </a>
 
             <a
-              className="inline-flex gap-4 px-8 py-4 w-full items-center rounded-full bg-indigo-50 hover:bg-indigo-100 shadow-sm font-medium bg-opacity-80"
+              className="inline-flex gap-4 px-8 py-4 w-full items-center rounded-full bg-indigo-50 hover:bg-indigo-100 shadow-xs font-medium bg-opacity-80"
               href="https://www.instagram.com/oneforthecity/"
             >
               <Image

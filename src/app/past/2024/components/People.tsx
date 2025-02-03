@@ -249,7 +249,7 @@ export function People() {
                               : "text-slate-500",
                           )}
                         >
-                          <Tab className="ui-not-focus-visible:outline-none">
+                          <Tab className="ui-not-focus-visible:outline-hidden">
                             <span className="absolute inset-0" />
                             {category.name}
                           </Tab>
@@ -265,7 +265,7 @@ export function People() {
             {categories.map((category, index) => (
               <Tab.Panel
                 key={category.name}
-                className="grid grid-cols-1 gap-x-8 gap-y-10 ui-not-focus-visible:outline-none sm:grid-cols-2 sm:gap-y-16 md:grid-cols-3"
+                className="grid grid-cols-1 gap-x-8 gap-y-10 ui-not-focus-visible:outline-hidden sm:grid-cols-2 sm:gap-y-16 md:grid-cols-3"
                 unmount={false}
               >
                 {category.people.map((person, index) => (

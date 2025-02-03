@@ -173,7 +173,7 @@ function ScheduleTabbed() {
                   day={{
                     ...day,
                     date: (
-                      <Tab className="ui-not-focus-visible:outline-none">
+                      <Tab className="ui-not-focus-visible:outline-hidden">
                         <span className="absolute inset-0" />
                         {day.date}
                       </Tab>
@@ -189,7 +189,7 @@ function ScheduleTabbed() {
         {schedule.map((day) => (
           <Tab.Panel
             key={day.dateTime}
-            className="ui-not-focus-visible:outline-none"
+            className="ui-not-focus-visible:outline-hidden"
           >
             <TimeSlots day={day} />
           </Tab.Panel>
@@ -217,7 +217,7 @@ function TimeSlots({ day, className }: { day: Day; className?: string }) {
     <ol
       className={clsx(
         className,
-        "space-y-8 bg-white/60 px-10 py-14 text-center shadow-xl shadow-blue-900/5 backdrop-blur",
+        "space-y-8 bg-white/60 px-10 py-14 text-center shadow-xl shadow-blue-900/5 backdrop-blur-sm",
       )}
     >
       {day.timeSlots.map((timeSlot, timeSlotIndex) => (

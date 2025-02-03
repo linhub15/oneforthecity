@@ -79,7 +79,7 @@ function Card({ hotel }: { hotel: Hotel }) {
         <div className="absolute inset-x-0 top-0 flex h-72 items-end justify-end overflow-hidden rounded-lg p-4">
           <div
             aria-hidden="true"
-            className="absolute inset-x-0 bottom-0 h-36 bg-gradient-to-t from-black opacity-50"
+            className="absolute inset-x-0 bottom-0 h-36 bg-linear-to-t from-black opacity-50"
           >
           </div>
           <p className="relative text-lg font-semibold text-white">

@@ -61,7 +61,7 @@ export function Hero() {
         </div>
         <div className="mx-auto max-w-2xl lg:max-w-4xl lg:px-12 flex justify-center pt-12">
           <iframe
-            className="rounded-xl shadow w-full h-72 lg:h-96"
+            className="rounded-xl shadow-sm w-full h-72 lg:h-96"
             src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d9491.3685338932!2d-113.5099987!3d53.5070154!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x53a021ffa16b56c5%3A0x78ca962164391760!2sSt%20Basil&#39;s%20Cultural%20Centre!5e0!3m2!1sen!2sca!4v1710199056276!5m2!1sen!2sca"
             width="600"
             style={{ border: 0 }}
