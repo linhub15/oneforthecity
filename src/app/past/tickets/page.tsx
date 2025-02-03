@@ -40,20 +40,6 @@ export default function Tickets() {
             </p>
           </div>
         </div>
-
-        <div>
-          <script async src="https://js.stripe.com/v3/pricing-table.js" />
-          <stripe-pricing-table
-            pricing-table-id="prctbl_1PLvUYIuLhs6aDZvpxI9Akzd"
-            publishable-key="pk_live_51Of8xFIuLhs6aDZvuRfTDAtLKfHYsyece1sUEwvgaN34Yft9ygktKedK0sp2YqYfjOV1pfWdj7j8lSgLUyKXbe0r00JriKehqV"
-          >
-          </stripe-pricing-table>
-
-          <stripe-pricing-table
-            pricing-table-id="prctbl_1OuiZtIuLhs6aDZvwKgstomU"
-            publishable-key="pk_live_51Of8xFIuLhs6aDZvuRfTDAtLKfHYsyece1sUEwvgaN34Yft9ygktKedK0sp2YqYfjOV1pfWdj7j8lSgLUyKXbe0r00JriKehqV"
-          />
-        </div>
       </div>
       <Footer />
     </>
