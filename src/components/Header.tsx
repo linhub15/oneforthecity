@@ -4,6 +4,8 @@ import { DiamondIcon } from "@/components/DiamondIcon";
 import { Logo } from "@/components/Logo";
 import Link from "next/link";
 
+import type { JSX } from "react";
+
 export function Header(props: { action?: JSX.Element }) {
   return (
     <header className="relative z-50 flex-none lg:pt-11">
